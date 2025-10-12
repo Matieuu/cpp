@@ -25,9 +25,9 @@ int& ref = a;     // referencja do a
 ref = 30;         // zmiana wartości przez referencję
 ```
 ### Ćwiczenia:
-- [ ] Zadeklaruj wskaźnik na `int` i zmień wartość przez wskaźnik.
-- [ ] Zadeklaruj referencję na zmienną i zmodyfikuj jej wartość.
-- [ ] Porównaj wskaźniki i referencje w praktycznych przykładach.
+- [x] Zadeklaruj wskaźnik na `int` i zmień wartość przez wskaźnik.
+- [x] Zadeklaruj referencję na zmienną i zmodyfikuj jej wartość.
+- [x] Porównaj wskaźniki i referencje w praktycznych przykładach.
 
 ---
 
