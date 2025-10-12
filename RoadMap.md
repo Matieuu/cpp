@@ -81,9 +81,9 @@ public:
 ```
 
 ### Ćwiczenia:
-- [ ] Stwórz klasę `Vector` dla typu `int`.
-- [ ] Dodawaj i usuwaj elementy, testując logi pamięci.
-- [ ] Celowo zrób wyciek i podwójne zwolnienie pamięci – sprawdź i popraw.
+- [x] Stwórz klasę `Vector` dla typu `int`.
+- [x] Dodawaj i usuwaj elementy, testując logi pamięci.
+- [x] Celowo zrób wyciek i podwójne zwolnienie pamięci – sprawdź i popraw.
 
 ---
 
