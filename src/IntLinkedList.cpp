@@ -45,7 +45,7 @@ IntLinkedList *IntLinkedList::getPrev() {
 
 void IntLinkedList::rmNext() {
     if (!this->hasNext())
-        return;
+        throw std::out_of_range("Next element doesn't exist");
 
     IntLinkedList *toRemove = this->getNext();
     this->next = toRemove->next;
@@ -57,7 +57,7 @@ void IntLinkedList::rmNext() {
 
 void IntLinkedList::rmPrev() {
     if (!this->hasPrev())
-        return;
+        throw std::out_of_range("Previous element doesn't exist");
 
     IntLinkedList *toRemove = this->getPrev();
     this->prev = toRemove->prev;

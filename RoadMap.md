@@ -109,9 +109,9 @@ struct Node {
 ```
 
 ### Ćwiczenia:
-- [ ] Zaimplementuj własną listę dla `int`.
-- [ ] Celowo wprowadź błędy pamięci i napraw je przy użyciu Valgrind / AddressSanitizer.
-- [ ] Dodaj wyjątek przy próbie usunięcia elementu, którego nie ma w liście.
+- [x] Zaimplementuj własną listę dla `int`.
+- [x] Celowo wprowadź błędy pamięci i napraw je przy użyciu Valgrind / AddressSanitizer.
+- [x] Dodaj wyjątek przy próbie usunięcia elementu, którego nie ma w liście.
 
 ---
 
