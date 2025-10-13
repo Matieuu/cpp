@@ -22,6 +22,7 @@ class IntLinkedList {
 
     IntLinkedList *getFirst();
     IntLinkedList *getLast();
+    void clear();
 
     void setValue(int value);
     int getValue() const { return value; };

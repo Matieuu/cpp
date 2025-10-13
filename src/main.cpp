@@ -23,8 +23,8 @@ int main() {
 
     list = list->getPrev()->getPrev()->getPrev()->getPrev();
     while (list->hasNext()) {
-        list = list->getNext();
         std::cout << "Następny element: " << list->getValue() << std::endl;
+        list = list->getNext();
         list->rmPrev();
     }
 
@@ -53,5 +53,5 @@ int main() {
         list = list->getNext();
     } while (true);
 
-    delete list;
+    list->clear();
 }

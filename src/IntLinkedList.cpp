@@ -3,16 +3,15 @@
 #include <stdexcept>
 
 IntLinkedList::~IntLinkedList() {
-    if (this->hasNext())
-        delete this->getNext();
-    if (this->hasPrev())
-        delete this->getPrev();
+    this->next = nullptr;
+    this->prev = nullptr;
 }
 
 void IntLinkedList::setNext(int value) {
     IntLinkedList *newNext = new IntLinkedList(value);
     if (this->hasNext())
         newNext->next = this->getNext();
+    newNext->prev = this;
     this->next = newNext;
 }
 
@@ -20,6 +19,7 @@ void IntLinkedList::setPrev(int value) {
     IntLinkedList *newPrev = new IntLinkedList(value);
     if (this->hasPrev())
         newPrev->prev = this->getPrev();
+    newPrev->next = this;
     this->prev = newPrev;
 }
 
@@ -44,13 +44,27 @@ IntLinkedList *IntLinkedList::getPrev() {
 }
 
 void IntLinkedList::rmNext() {
-    IntLinkedList *newNext = this->getNext()->getNext();
-    this->next = newNext;
+    if (!this->hasNext())
+        return;
+
+    IntLinkedList *toRemove = this->getNext();
+    this->next = toRemove->next;
+
+    if (this->next)
+        this->next->prev = this;
+    delete toRemove;
 }
 
 void IntLinkedList::rmPrev() {
-    IntLinkedList *newPrev = this->getPrev()->getPrev();
-    this->prev = newPrev;
+    if (!this->hasPrev())
+        return;
+
+    IntLinkedList *toRemove = this->getPrev();
+    this->prev = toRemove->prev;
+
+    if (this->prev)
+        this->prev->next = this;
+    delete toRemove;
 }
 
 IntLinkedList *IntLinkedList::getFirst() {
@@ -65,6 +79,15 @@ IntLinkedList *IntLinkedList::getLast() {
     while (current->hasNext())
         current = current->getNext();
     return current;
+}
+
+void IntLinkedList::clear() {
+    IntLinkedList *node = this->getFirst();
+    while (node) {
+        IntLinkedList *nextNode = node->next;
+        delete node;
+        node = nextNode;
+    }
 }
 
 void IntLinkedList::setValue(int newValue) {
