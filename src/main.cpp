@@ -1,6 +1,18 @@
 #include "IntLinkedList.hpp"
 #include <iostream>
 
+/*
+ * breadboard computing - tworzenie komputera, języka programowania i os
+ * drumyr - praktyczne wykorzystanie
+ * qubit - komputer kwantowy
+ * solvro - app dev
+ * studenckie studio deweloperskie - game dev
+ * sisk - jak zarobić ale się nie narobić
+ * tk games - game dev
+ * traf-barak - praktyczne wykorzystanie
+ * wms_dev - web dev
+ */
+
 int main() {
     IntLinkedList *list = new IntLinkedList(16);
 
